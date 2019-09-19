@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation_2</title>
+	<style>
+		body {
+			display: flex;
+			height: 100vh;
+			align-items: center;
+			justify-content: center;
+		}
+		.pelota {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			position: absolute;
+			/*background-color: peru;*/
+			/*margin: 0 auto;*/
+			/*transition-property: width, height;*/
+			/*transition-duration: 1s;*/
+			/*transition-delay: 1s;*/
+			/*transition-timing-function: ease;*/
+			transition: 1s; /* esta es otra forma de hacer la transision */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-size: 30px;
+		}
+		.pelota.a {
+			background-color: peru;
+			left: 0;
+		}
+		.pelota.b {
+			background-color: green;
+			right: 0;
+		}
+		.canasta {
+			border: 1px solid black;
+			position: relative;
+			height: 150px;
+			width: 100%;
+		}
+		.canasta:hover .pelota.a {
+			left: calc(50% - 150px);
+		}
+		.canasta:hover .pelota.b {
+		right: calc(50% - 150px);
+		}
+	</style>
+</head>
+<body>
+	<div class="canasta">
+	<div class="pelota a">Hola</div>
+	<div class="pelota b">Perros</div>
+	</div>
+</body>
+</html>
